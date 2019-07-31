@@ -32,12 +32,6 @@ textarea {
   --active-color: #00a3ff;
   --active-color-light: #6fcbff;
 }
-#menuToggle {
-  display: none;
-}
-.header_nav_smallDevise {
-  display: none;
-}
 
 /* ==========================================================================
      General styles
@@ -187,6 +181,72 @@ p {
 }
 .contact_button-phone {
   padding: 7px 10px;
+}
+/*navigation*/
+
+.header_nav_smallDevise {
+  display: none;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 30px;
+}
+.active {
+  display: flex;
+}
+.menu-close {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  top: 20px;
+  right: -80px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.menu-close:hover {
+  color: #ffffff;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+#menuToggle {
+  top: 25px;
+  left: 0;
+  z-index: 11;
+  display: none;
+  text-align: center;
+  font-size: 2em;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+#menuToggle:hover {
+  color: #ffffff;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .header_nav {
   line-height: 19px;
@@ -434,28 +494,59 @@ p {
   .about_img-right {
     display: none;
   }
+  h1 {
+    font-size: 20px;
+  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-}
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
+  .screen_readmore {
+    background: #fff;
+  }
+  .screen-container {
+    padding-right: 5px;
+  }
   #menuToggle {
-    display: block;
+    display: flex;
+    width: 50px;
+    font-size: 30px;
+    margin: 20px;
   }
   .header_nav {
     display: none;
   }
-  .header_nav_smallDevise {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .header-nav_wrap {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .contact_button {
+    margin: 3px;
+  }
+  .header-container {
+    margin: 5px;
+  }
+  .header-logo {
+    width: 100vw;
+  }
+  .paginations {
+    position: relative;
+    top: 0;
+  }
+  .paginations_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .paginations_list-item {
+    margin: 5px;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
 }
 
 /*==========  Mobile First Method  ==========*/
