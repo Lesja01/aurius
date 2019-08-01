@@ -4,6 +4,12 @@
     $("#menuToggle").toggleClass("active");
     $(".header_nav_smallDevise").toggleClass("active");
   });
+  $(document).bind("touchmove", false);
+  $(".main").mousewheel(function(event, delta) {
+    this.scrollLeft -= delta * 150;
+
+    event.preventDefault();
+  });
 })(jQuery);
 
 function swipe() {
